@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PB13 Restaurant - {% block title %}Home{% endblock %}</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>PB13 Restaurant</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/menu">Menu</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        <!-- This block will be replaced by child templates -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 PB13 Restaurant. All Rights Reserved.</p>
+        <p>Address: Sherpur, Opposite HDFC Bank, Katron Road, Dhuri, District Sangrur, 148025</p>
+        <p>Phone: +91-9876543210 | Email: pb13.restaurant@example.com</p>
+    </footer>
+</body>
+</html>
